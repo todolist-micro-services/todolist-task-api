@@ -27,7 +27,7 @@ class RetrieveTaskTests {
 
     @Test
     public void requestWithBadBearerToken() throws Exception {
-        when(retrieveUser.retrieveAllUserLinkToList(Mockito.anyString(), String.valueOf(Mockito.any(HttpServletRequest.class))))
+        when(retrieveUser.retrieveAllListTasks(Mockito.anyString(), String.valueOf(Mockito.any(HttpServletRequest.class))))
                 .thenReturn(new ResponseEntity<>(HttpStatus.OK));  // Adjust the response as needed
 
         mvc.perform(MockMvcRequestBuilders.get("/users/me")
