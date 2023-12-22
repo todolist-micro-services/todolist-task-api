@@ -48,9 +48,10 @@ public class CreateTaskController {
             return ResponseEntity
                     .status(HttpStatus.INTERNAL_SERVER_ERROR)
                     .body("{\"error\": \"Internal server error\"}");
+        final String formatOutput = String.format("{\"task\": \"%s\"}", String.valueOf(dbTask.taskId));
         return ResponseEntity
                 .status(HttpStatus.CREATED)
-                .body(dbTask.taskId);
+                .body(formatOutput);
     }
 
     private ResponseEntity<Object> checkParameters(CreateTaskRequest createTaskRequest) {
