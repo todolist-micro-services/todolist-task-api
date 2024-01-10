@@ -16,4 +16,6 @@ COPY . .
 
 RUN ./gradlew build
 
+EXPOSE $TASK_API_PORT
+
 ENTRYPOINT ["./gradlew","bootRun"]
