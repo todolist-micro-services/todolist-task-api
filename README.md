@@ -24,17 +24,6 @@ Gradle = 8.5.0
 gradle build
 ```
 
-## config
-
-add ```application.properties``` in ```src/main/resources``` with this content:
-
-```properties
-EVENT_API_PORT=
-DB_URL=
-DB_USERNAME=
-DB_PASSWORD=
-```
-
 ## run
 
 ```bash
